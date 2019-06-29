@@ -1,7 +1,7 @@
-export const INCREMENT_REQUESTED = 'counter/INCREMENT_REQUESTED'
-export const INCREMENT = 'counter/INCREMENT'
-export const DECREMENT_REQUESTED = 'counter/DECREMENT_REQUESTED'
-export const DECREMENT = 'counter/DECREMENT'
+export const INCREMENT_REQUESTED = "counter/INCREMENT_REQUESTED"
+export const INCREMENT = "counter/INCREMENT"
+export const DECREMENT_REQUESTED = "counter/DECREMENT_REQUESTED"
+export const DECREMENT = "counter/DECREMENT"
 
 const initialState = {
   count: 0,
@@ -43,7 +43,7 @@ export default (state = initialState, action) => {
 }
 
 export const increment = () => {
-  return dispatch => {
+  return (dispatch) => {
     dispatch({
       type: INCREMENT_REQUESTED
     })
@@ -55,7 +55,7 @@ export const increment = () => {
 }
 
 export const incrementAsync = () => {
-  return dispatch => {
+  return (dispatch) => {
     dispatch({
       type: INCREMENT_REQUESTED
     })
@@ -69,7 +69,7 @@ export const incrementAsync = () => {
 }
 
 export const decrement = () => {
-  return dispatch => {
+  return (dispatch) => {
     dispatch({
       type: DECREMENT_REQUESTED
     })
@@ -81,7 +81,7 @@ export const decrement = () => {
 }
 
 export const decrementAsync = () => {
-  return dispatch => {
+  return (dispatch) => {
     dispatch({
       type: DECREMENT_REQUESTED
     })
