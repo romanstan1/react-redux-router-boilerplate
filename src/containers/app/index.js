@@ -1,20 +1,20 @@
-import React from "react"
-import {Route, Link} from "react-router-dom"
-import Home from "../home"
-import About from "../about"
+import React, {PureComponent} from "react"
+import {Link} from "react-router-dom"
 
-const App = () => (
-  <div>
-    <header>
-      <Link to="/">Home</Link>
-      <Link to="/about-us">About</Link>
-    </header>
+import Routes from "./Routes"
 
-    <main>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about-us" component={About} />
-    </main>
-  </div>
-)
-
-export default App
+export default class App extends PureComponent {
+  render() {
+    return (
+      <>
+        <header>
+          <Link to="/">Home</Link>
+          <Link to="/about-us">About</Link>
+        </header>
+        <main>
+          <Routes />
+        </main>
+      </>
+    )
+  }
+}
